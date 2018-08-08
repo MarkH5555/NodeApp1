@@ -6,16 +6,18 @@ const port = 8000;
 
 
 const users = [
-	{id: '1', cName: 'Adam', sName: 'Smith'},
-	{id: '2',cName: 'Ben', sName: 'Jones'},
-	{id: '3',cName: 'Colin', sName: 'Banks'},
-	{id: '4',cName: 'Dave', sName: 'Yerkess'},
-	{id: '5',cName: 'Ed', sName: 'Millar'}
+	{cName: 'Adam', sName: 'Smith'},
+	{cName: 'Ben', sName: 'Davis'},
+	{cName: 'Colin', sName: 'Banks'},
+	{cName: 'Dave', sName: 'Yerkess'},
+	{cName: 'Ed', sName: 'Millar'}
 ];
 
 
 app.get('/api/users', (req, res) => {
-	console.log('API data request on: /api/users ');
+
+	date = new Date();
+	console.log('API data request on: /api/users on: ' + date);
 
 	res.json(users);
 });
