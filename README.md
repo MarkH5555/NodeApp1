@@ -1,6 +1,6 @@
 # NodeApp1
 
-A simple Node.js/Express backend feeds a list og names via /api/data to a simple React front end running on localhost:3000
+A simple Node.js/Express backend feeds a list of names via /api/data to a simple React front end running on localhost:3000
 
 
 
