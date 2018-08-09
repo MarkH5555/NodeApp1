@@ -4,6 +4,6 @@ A simple Node.js/Express backend feeds a list of names via /api/data to a simple
 
 
 
-Nodemon installed: run the server with >npm run dev
+Nodemon installed: Start the server in App1/ with >npm run dev
 
-Run the front end with >npm start in the client folder
+Start the React front end in App1/client/ with >npm start in the client folder

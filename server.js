@@ -17,7 +17,7 @@ const users = [
 app.get('/api/users', (req, res) => {
 
 	date = new Date();
-	console.log('API data request on: /api/users on: ' + date);
+	console.log('API data request on: /api/users ' + date);
 
 	res.json(users);
 });
@@ -25,5 +25,5 @@ app.get('/api/users', (req, res) => {
 
 
 app.listen(port, () => {
-	console.log("Listening on port " + port);
+	console.log("Server.js listening on port: " + port);
 });
