@@ -13,7 +13,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Node.js/React App</h1>
         </header>
-        <Users />
+        <Users title="User List"/>
       </div>
     );
   }

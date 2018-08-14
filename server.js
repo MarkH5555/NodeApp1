@@ -5,12 +5,12 @@ const app = express();
 const port = 8000;
 
 
-const users = [
-	{cName: 'Adam', sName: 'Smith'},
-	{cName: 'Ben', sName: 'Davis'},
+const users = [	
 	{cName: 'Colin', sName: 'Banks'},
+	{cName: 'Ben', sName: 'Davis'},
 	{cName: 'Dave', sName: 'Yerkess'},
-	{cName: 'Ed', sName: 'Millar'}
+	{cName: 'Adam', sName: 'Smith'},
+	{cName: 'Ed', sName: 'Millar'},
 ];
 
 
