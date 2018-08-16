@@ -7,6 +7,7 @@ class Users extends Component {
     this.addNewName = this.addNewName.bind(this);
     this.update1 = this.update1.bind(this);
     this.update2 = this.update2.bind(this);
+    this.sortStringBy = this.sortStringBy.bind(this);
 
 
     // If 'users' isn't initialised here as an empty array then a 'null' error is thrown when 
@@ -42,17 +43,31 @@ class Users extends Component {
         this.setState({ name2: e.target.value });
   }
 
+  sortStringBy(key) {
+
+    console.log("Sort key: " +  key);
+
+    let tmpUsers = this.state.users; 
+    tmpUsers.sort( (a,b) => a[key].toLowerCase() > b[key].toLowerCase());
+
+    return tmpUsers;
+  }
+
   render() {
+
+    let sortedUsers = this.sortStringBy('sName');
+
     return (
       <div>
         <h2>{this.props.title}</h2>
         <ul className="name-list">
-          {this.state.users.map((user, i, j) => <li key={i}>{user.cName} {user.sName} <button>Del</button></li>)}
+          {
+            sortedUsers.map((user, i) => <li key={i}>{user.cName} {user.sName} <button>Del</button></li>)
+          }
         </ul>
         <button onClick={this.addNewName}>Add New</button>
         <input onChange={ this.update1 }  value={ this.state.name1 } />
-        <input onChange={ this.update2 }  value={ this.state.name2 } />
-       
+        <input onChange={ this.update2 }  value={ this.state.name2 } />      
       </div>
     );
   }
